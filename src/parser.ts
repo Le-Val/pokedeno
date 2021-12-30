@@ -89,10 +89,10 @@ export function parseTeamToString(pokes: Pokemon[]) {
 
     // set EVs & IVs
     if (poke.EVs && poke.EVs.length > 0) {
-      out += `EVs ${poke.EVs.join(" / ")}\n`;
+      out += `EVs: ${poke.EVs.join(" / ")}\n`;
     }
     if (poke.IVs && poke.IVs.length > 0) {
-      out += `IVs ${poke.IVs.join(" / ")}\n`;
+      out += `IVs: ${poke.IVs.join(" / ")}\n`;
     }
 
     // set nature
