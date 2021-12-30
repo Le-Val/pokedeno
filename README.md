@@ -3,7 +3,7 @@
 
 ## usage:
 ```ts
-import { createPaste, getPaste, parseTeamToString } from "https://raw.githubusercontent.com/Le-Val/pokedeno/main/mod.ts"
+import { createPaste, getPaste, parseTeamToString } from "https://deno.land/x/poke_deno@1.0.0/mod.ts";
 
 // get the content from https://pokepast.es/debbc67dd4f7a6e8
 const { paste, data } = await getPaste("debbc67dd4f7a6e8");
