@@ -73,12 +73,12 @@ export function parseTeamToString(pokes: Pokemon[]) {
     if (poke.item) {
       out += `${poke.name} @ ${poke.item}\n`;
       if (poke.genre) {
-        out += `${poke.name} @ ${poke.item}\n`;
+        out += `${poke.name} ${poke.genre} @ ${poke.item}\n`;
       }
     } else {
       out += `${poke.name}\n`;
       if (poke.genre) {
-        out += `${poke.name} @ ${poke.item}\n`;
+        out += `${poke.name} ${poke.genre} @ ${poke.item}\n`;
       }
     }
 
