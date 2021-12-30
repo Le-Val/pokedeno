@@ -11,10 +11,10 @@ const { paste, data } = await getPaste("debbc67dd4f7a6e8");
 console.log(paste, data.title, data.author, data.notes);
 
 // create a new paste
-const data = parseTeamToString(paste.pokes);
+const content = parseTeamToString(paste.pokes);
 
 // get the created url
-const url = await createPaste("Le Val", data, "Note: gen5ou", "Sand balance");
+const url = await createPaste("Le Val", content, "Note: gen5ou", "Sand balance");
 
 console.log(url);
 ```
