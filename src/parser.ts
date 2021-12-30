@@ -65,7 +65,7 @@ export function parseStringToPokemon(dat: string) {
 }
 
 /* Parse a Pokemon object to a string */
-export function parsePokemonToString(pokes: Pokemon[]) {
+export function parseTeamToString(pokes: Pokemon[]) {
   let out = "";
 
   for (const poke of pokes) {
