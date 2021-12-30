@@ -95,7 +95,7 @@ export function parseTeamToString(pokes: Pokemon[]) {
 
     // movs
     if (poke.moves && poke.moves.length > 0) {
-      out += poke.moves.map((m) => `- ${m}`).join("\n");
+      out += poke.moves.join("\n");
     }
 
     // re-join the given strings
