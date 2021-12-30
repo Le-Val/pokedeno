@@ -90,7 +90,7 @@ export function parseTeamToString(pokes: Pokemon[]) {
 
     // set nature
     if (poke.nature) {
-      out += `${poke.nature} Nature`;
+      out += `${poke.nature} Nature\n`;
     }
 
     // movs
