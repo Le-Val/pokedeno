@@ -2,7 +2,7 @@ import type { Pokemon, PokemonGenre, PokemonNature } from "./types/pokemon.ts";
 
 /* Separates each pokemon out of the team */
 export function splitEachBlankNewline(s: string) {
-  const m = s.split(/\r\n\r/g)
+  const m = s.split(/\r\n\r/g);
   return m.slice(0, m.length - 1).map((item) => item.trim());
 }
 
@@ -71,10 +71,15 @@ export function parseTeamToString(pokes: Pokemon[]) {
   for (const poke of pokes) {
     // set name
     if (poke.item) {
-      out += `${poke.name} @ ${poke.item}\n`
-    }
-    else {
-      out += `${poke.name}\n`
+      out += `${poke.name} @ ${poke.item}\n`;
+      if (poke.genre) {
+        out += `${poke.name} @ ${poke.item}\n`;
+      }
+    } else {
+      out += `${poke.name}\n`;
+      if (poke.genre) {
+        out += `${poke.name} @ ${poke.item}\n`;
+      }
     }
 
     // set ability
