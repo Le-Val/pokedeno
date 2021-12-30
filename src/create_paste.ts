@@ -9,7 +9,7 @@ export async function createPaste(
   title?: string
 ) {
   const { url } = await fetch(
-    `https://pokepast.es/create?paste=${paste}${author ? `&author=${author}` : ""}${notes ? `&notes=${notes}` : ""}${title ? `&title=${title}` : ""}`,
+    `https://pokepast.es/create?${author ? `author=${author}&` : ""}${notes ? `notes=${notes}&` : ""}${title ? `title=${title}&` : ""}paste=${paste}`,
     {
       method: "POST",
     }
