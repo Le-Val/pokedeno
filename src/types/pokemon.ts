@@ -9,13 +9,13 @@ export interface Pokemon {
   /* The item that the Pokemon is holding */
   item   ?: string
   /* @see https://pokemon.fandom.com/wiki/Effort_Value */
-  EVs    : string[]
+  EVs    ?: string[]
   /* @see https://pokemon.fandom.com/wiki/Individual_Values */
-  IVs    : string[]
+  IVs    ?: string[]
   /* An array of pokemon moves, each one is given with a starting - */
-  moves  : string[]
+  moves  ?: string[]
   /* Genre */
-  genre ?: string
+  genre  ?: string
 }
 
 /* male or female */

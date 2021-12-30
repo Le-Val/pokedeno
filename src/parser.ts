@@ -45,7 +45,7 @@ export function parseItem(s: string) {
 /* Search for moves in a given string */
 export function parseMoves(s: string) {
   // TODO: do not slice this
-  return s.match(/(?:-)(.+){1,4}/g)?.map((str) => str.slice(1).trim());
+  return s.match(/(?:-)(.+){1,4}/g)?.map((str) => str.trim());
 }
 
 /* parse a string to a Pokemon object */
@@ -81,10 +81,10 @@ export function parseTeamToString(pokes: Pokemon[]) {
     out += `Ability: ${poke.ability}\n`;
 
     // set EVs & IVs
-    if (poke.EVs.length > 0) {
+    if (poke.EVs && poke.EVs.length > 0) {
       out += `EVs ${poke.EVs.join(" /")}\n`;
     }
-    if (poke.IVs.length > 0) {
+    if (poke.IVs && poke.IVs.length > 0) {
       out += `IVs ${poke.IVs.join(" /")}\n`;
     }
 
@@ -94,7 +94,7 @@ export function parseTeamToString(pokes: Pokemon[]) {
     }
 
     // movs
-    if (poke.moves.length > 0) {
+    if (poke.moves && poke.moves.length > 0) {
       out += poke.moves.map((m) => `- ${m}`).join("\n");
     }
 
