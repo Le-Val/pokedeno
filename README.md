@@ -14,7 +14,7 @@ console.log(paste, data.title, data.author, data.notes);
 const content = parseTeamToString(paste.pokes);
 
 // get the created url
-const url = await createPaste("Le Val", content, "Note: gen5ou", "Sand balance");
+const url = await createPaste("Yuzu", content, "Note: gen5ou", "Sand balance");
 
 console.log(url);
 ```
